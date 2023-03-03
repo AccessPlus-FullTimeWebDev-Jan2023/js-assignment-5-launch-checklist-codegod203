@@ -41,7 +41,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
   if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty" ) {
       alert("All fields are required!");
       return;
-      //console.log("help!!!")
+      
   } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number" ) {
     alert("Make sure to enter valid information for each field!");
       return;
@@ -78,7 +78,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
   }
   
 }
-//add document, list, back to formSubmission
+
 async function myFetch() {
   let planetsReturned;
 
@@ -88,8 +88,7 @@ async function myFetch() {
 
   return planetsReturned;
 }
-//math.Random <=0 less than 1. need to round (down? so we can get index 0?) and have enough numbers for planets (6) in the array of objects.
-//return the planet object at random indexes... 
+
 function pickPlanet(planets) {
  let randomPlanet = Math.floor(Math.random()*planets.length);
  return planets[randomPlanet];
